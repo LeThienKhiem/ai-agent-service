@@ -1,84 +1,73 @@
-"use client";
-
-import { Sparkles, Heart } from "lucide-react";
+'use client';
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid md:grid-cols-4 gap-8 mb-12">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold text-white">
-                AI Agent<span className="text-primary-light"> Services</span>
-              </span>
-            </a>
-            <p className="text-gray-400 text-base leading-relaxed max-w-md mb-6">
-              Đối tác chuyển đổi số AI hàng đầu cho doanh nghiệp Việt Nam. Chúng tôi giúp doanh nghiệp truyền thống
-              ứng dụng AI để tăng hiệu suất, giảm chi phí và bứt phá tăng trưởng.
-            </p>
-          </div>
+    <footer className="bg-noir text-cream">
+      <div className="h-px w-full bg-gold" />
+      <div className="max-w-7xl mx-auto px-6 lg:px-8 py-12 lg:py-16">
+        {/* Top */}
+        <div className="mb-10">
+          <h3 className="font-display text-3xl text-cream mb-2 tracking-tight">
+            AI Agent Services
+          </h3>
+          <p className="text-silver font-light text-sm leading-relaxed max-w-md">
+            Đối tác chuyển đổi số AI hàng đầu cho doanh nghiệp Việt Nam.
+          </p>
+        </div>
 
-          {/* Services */}
+        {/* Columns */}
+        <div className="grid md:grid-cols-3 gap-8 lg:gap-16 mb-10 pb-10 border-b border-pearl/20">
           <div>
-            <h4 className="text-base font-semibold text-white mb-4 uppercase tracking-wider">
-              Dịch vụ
-            </h4>
+            <div className="text-xs font-medium tracking-widest text-gold uppercase mb-5">Sản Phẩm</div>
             <ul className="space-y-2.5">
               {[
-                "AI Chatbot",
-                "Tự động hóa Quy trình",
-                "Phân tích Dữ liệu",
-                "Giải pháp Tùy chỉnh",
+                { label: 'AI Trợ Lý Khách Hàng', href: '/products/ai-tro-ly-khach-hang' },
+                { label: 'AI Chốt Đơn', href: '/products/ai-chot-don' },
+                { label: 'AI Nhắc Việc', href: '/products/ai-nhac-viec' },
+                { label: 'AI Kế Toán', href: '/products/ai-ke-toan' },
+                { label: 'AI Social Post', href: '/products/ai-social-post' },
+                { label: 'AI Tư Vấn Chiến Lược', href: '/products/ai-tu-van' },
               ].map((item) => (
-                <li key={item}>
-                  <a
-                    href="#services"
-                    className="text-base text-gray-400 hover:text-white transition-colors"
-                  >
-                    {item}
-                  </a>
+                <li key={item.label}>
+                  <a href={item.href} className="text-silver hover:text-gold transition-colors text-sm font-light">{item.label}</a>
                 </li>
               ))}
             </ul>
           </div>
-
-          {/* Company */}
           <div>
-            <h4 className="text-base font-semibold text-white mb-4 uppercase tracking-wider">
-              Công ty
-            </h4>
+            <div className="text-xs font-medium tracking-widest text-gold uppercase mb-5">Công Ty</div>
             <ul className="space-y-2.5">
               {[
-                { label: "Về chúng tôi", href: "#" },
-                { label: "Quy trình", href: "#process" },
-                { label: "Khách hàng", href: "#testimonials" },
-                { label: "Liên hệ", href: "#contact" },
+                { label: 'Câu chuyện', href: '#story' },
+                { label: 'Quy trình', href: '#process' },
+                { label: 'Khách hàng', href: '#testimonials' },
+                { label: 'Blog', href: '/blog' },
+                { label: 'Liên hệ', href: '#contact' },
               ].map((item) => (
                 <li key={item.label}>
-                  <a
-                    href={item.href}
-                    className="text-base text-gray-400 hover:text-white transition-colors"
-                  >
-                    {item.label}
-                  </a>
+                  <a href={item.href} className="text-silver hover:text-gold transition-colors text-sm font-light">{item.label}</a>
                 </li>
               ))}
+            </ul>
+          </div>
+          <div>
+            <div className="text-xs font-medium tracking-widest text-gold uppercase mb-5">Liên Hệ</div>
+            <ul className="space-y-2.5 text-sm font-light text-silver">
+              <li>0899 xxx xxx</li>
+              <li>hello@aiagentservices.vn</li>
+              <li>TP. Hồ Chí Minh, Việt Nam</li>
+              <li>Zalo: AI Agent Services</li>
             </ul>
           </div>
         </div>
 
         {/* Bottom */}
-        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-base text-gray-500">
-            © 2026 AI Agent Services. All rights reserved.
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
+          <p className="text-xs font-light text-silver tracking-wide">
+            &copy; 2026 AI Agent Services. All rights reserved.
           </p>
-          <p className="flex items-center gap-1 text-base text-gray-500">
-            Made with <Heart className="w-4 h-4 text-accent-light fill-accent-light" /> in Vietnam
+          <p className="text-xs font-light text-silver tracking-wide">
+            Crafted with care in Vietnam
           </p>
         </div>
       </div>
