@@ -18,12 +18,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: 'Sản phẩm', href: '#products' },
-    { label: 'Câu chuyện', href: '#story' },
-    { label: 'Quy trình', href: '#process' },
-    { label: 'Khách hàng', href: '#testimonials' },
+    { label: 'Sản phẩm', href: '/#products' },
+    { label: 'Câu chuyện', href: '/#story' },
+    { label: 'Quy trình', href: '/#process' },
+    { label: 'Khách hàng', href: '/#testimonials' },
     { label: 'Blog', href: '/blog' },
-    { label: 'Liên hệ', href: '#contact' },
+    { label: 'Liên hệ', href: '/#contact' },
   ];
 
   return (
@@ -61,9 +61,9 @@ export default function Navbar() {
 
           {/* CTA Button - Desktop */}
           <div className="hidden lg:flex">
-            <a href="#contact" className="btn-luxury btn-luxury-primary text-xs px-5 py-2.5">
+            <Link href="/#contact" className="btn-luxury btn-luxury-primary text-xs px-5 py-2.5">
               Tư Vấn
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -89,9 +89,9 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
-            <a href="#contact" className="btn-luxury btn-luxury-primary w-full text-xs text-center mt-4 block py-3">
+            <Link href="/#contact" className="btn-luxury btn-luxury-primary w-full text-xs text-center mt-4 block py-3">
               Tư Vấn
-            </a>
+            </Link>
           </div>
         )}
       </div>

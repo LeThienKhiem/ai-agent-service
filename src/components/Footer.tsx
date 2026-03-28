@@ -38,11 +38,11 @@ export default function Footer() {
             <div className="text-xs font-medium tracking-widest text-gold uppercase mb-5">Công Ty</div>
             <ul className="space-y-2.5">
               {[
-                { label: 'Câu chuyện', href: '#story' },
-                { label: 'Quy trình', href: '#process' },
-                { label: 'Khách hàng', href: '#testimonials' },
+                { label: 'Câu chuyện', href: '/#story' },
+                { label: 'Quy trình', href: '/#process' },
+                { label: 'Khách hàng', href: '/#testimonials' },
                 { label: 'Blog', href: '/blog' },
-                { label: 'Liên hệ', href: '#contact' },
+                { label: 'Liên hệ', href: '/#contact' },
               ].map((item) => (
                 <li key={item.label}>
                   <a href={item.href} className="text-silver hover:text-gold transition-colors text-sm font-light">{item.label}</a>

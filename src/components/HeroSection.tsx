@@ -38,11 +38,11 @@ export default function HeroSection() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <a href="#products" className="btn-luxury btn-luxury-primary text-xs inline-flex items-center justify-center gap-2">
+              <a href="/#products" className="btn-luxury btn-luxury-primary text-xs inline-flex items-center justify-center gap-2">
                 Khám Phá Bộ Sưu Tập
                 <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
               </a>
-              <a href="#contact" className="btn-luxury btn-luxury-outline text-xs inline-flex items-center justify-center">
+              <a href="/#contact" className="btn-luxury btn-luxury-outline text-xs inline-flex items-center justify-center">
                 Đặt Lịch Tư Vấn
               </a>
             </div>
