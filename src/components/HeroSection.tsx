@@ -67,7 +67,7 @@ export default function HeroSection() {
 
           {/* Right Column - Editorial Image */}
           <div className={`relative transform transition-all duration-1000 delay-300 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'}`}>
-            <div className="relative aspect-[4/5] max-h-[520px]">
+            <div className="relative aspect-[4/5] max-h-[520px] mx-4 my-4">
               <div className="absolute -top-4 -left-4 w-16 h-16 border-t-2 border-l-2 border-gold pointer-events-none z-10" />
               <img
                 src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=800&fit=crop&q=80"
@@ -76,11 +76,11 @@ export default function HeroSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-charcoal/10 via-transparent to-transparent" />
               <div className="absolute -bottom-4 -right-4 w-16 h-16 border-b-2 border-r-2 border-gold pointer-events-none z-10" />
-            </div>
 
-            <div className="absolute bottom-4 right-4 bg-cream/95 backdrop-blur-sm border border-pearl px-6 py-4">
-              <div className="text-xs uppercase tracking-widest text-slate font-light mb-1">Công Nghệ Tiên Tiến</div>
-              <p className="font-display text-base text-charcoal font-light">Giải Pháp Tối Ưu</p>
+              <div className="absolute bottom-8 right-8 bg-cream/95 backdrop-blur-sm border border-pearl px-5 py-3 z-10">
+                <div className="text-xs uppercase tracking-widest text-slate font-light mb-1">Công Nghệ Tiên Tiến</div>
+                <p className="font-display text-base text-charcoal font-light">Giải Pháp Tối Ưu</p>
+              </div>
             </div>
           </div>
         </div>
